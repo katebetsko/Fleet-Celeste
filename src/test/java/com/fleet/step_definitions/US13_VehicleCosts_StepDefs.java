@@ -22,11 +22,16 @@ public class US13_VehicleCosts_StepDefs extends BasePage {
 
 
 
-
     @Given("user is on the login page")
     public void userIsOnTheLoginPage() {
 
         Driver.getDriver().get("https://qa.transmuda.com/user/login");
+    }
+
+    @Given("user login with valid {string} and {string}")
+    public void userLoginWithValidAnd(String username, String password) {
+
+        loginPage.login(username,password);
     }
 
     @And("user go on the Vehicle Costs page at the Fleet module")
@@ -54,37 +59,15 @@ public class US13_VehicleCosts_StepDefs extends BasePage {
 
                     }
 
-            @When("user login with a driver credentials")
-            public void userLoginWithADriverCredentials() {
-                loginPage.login("user1", "UserUser123");
-                waitUntilLoaderScreenDisappear();
-            }
-
-            @When("user login with a sales manager credentials")
-            public void userLoginWithASalesManagerCredentials() {
-                loginPage.login("salesmanager101", "UserUser123");
-                waitUntilLoaderScreenDisappear();
-            }
-
-
-            @When("user login with a store manager credentials")
-            public void userLoginWithAStoreManagerCredentials() {
-                loginPage.login("storemanager85", "UserUser123");
-                waitUntilLoaderScreenDisappear();
-            }
 
     @Then("user should be able click on the first checkbox to check all the vehicle costs")
     public void userShouldBeAbleClickOnTheFirstCheckboxToCheckAllTheVehicleCosts() {
         vehicleCostsPage.firstCheckbox.click();
         Assert.assertTrue(vehicleCostsPage.firstCheckbox.isDisplayed());
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(3);
 
 
     }
 
-    @Given("user login with valid {string} and {string}")
-    public void userLoginWithValidAnd(String username, String password) {
 
-        loginPage.login(username,password);
-    }
 }

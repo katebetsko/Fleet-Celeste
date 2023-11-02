@@ -7,33 +7,46 @@ Feature: US13 - As a user, I want to manage filters on the Vehicle Cost page
 	Background: user is on the login page
 
 
-		
-
 	@B30G13-169
-	Scenario: Verify that user (driver) able to see 3 columns on the Vehicle Costs page: Type, Total Price, Date
-		Given user login with a driver credentials
-		    And   user go on the Vehicle Costs page at the Fleet module
-		    Then  user should be able to see following columns:
-		      |TYPE|
-		      |TOTAL PRICE|
-		      |DATE|	
+	Scenario Outline: Verify that user (driver) able to see 3 columns on the Vehicle Costs page: Type, Total Price, Date
+		Given user login with valid "<username>" and "<password>"
+		And   user go on the Vehicle Costs page at the Fleet module
+		Then  user should be able to see following columns:
+			| TYPE        |
+			| TOTAL PRICE |
+			| DATE        |
+		Examples: valid credentials
+			| username | password    |
+			| user1    | UserUser123 |
+			| user47   | UserUser123 |
+			| user177  | UserUser123 |
 
 
 	@B30G13-170
-	Scenario: Verify that user (sales manager) able to see 3 columns on the Vehicle Costs page: Type, Total Price, Date
-		Given user login with a sales manager credentials
-		    And   user go on the Vehicle Costs page at the Fleet module
-		    Then  user should be able to see following columns:
-		      |TYPE|
-		      |TOTAL PRICE|
-		      |DATE|	
+	Scenario Outline: Verify that user (sales manager) able to see 3 columns on the Vehicle Costs page: Type, Total Price, Date
+		Given user login with valid "<username>" and "<password>"
+		And   user go on the Vehicle Costs page at the Fleet module
+		Then  user should be able to see following columns:
+			| TYPE        |
+			| TOTAL PRICE |
+			| DATE        |
+		Examples: valid credentials
+			| username        | password    |
+			| salesmanager101 | UserUser123 |
+			| salesmanager145 | UserUser123 |
+			| salesmanager222 | UserUser123 |
 
 
 	@B30G13-171
-	Scenario: Verify that user (store manager) able to see 3 columns on the Vehicle Costs page: Type, Total Price, Date
-		Given user login with a store manager credentials
-		    And   user go on the Vehicle Costs page at the Fleet module
-		    Then  user should be able to see following columns:
-		      |TYPE|
-		      |TOTAL PRICE|
-		      |DATE|
+	Scenario Outline: Verify that user (store manager) able to see 3 columns on the Vehicle Costs page: Type, Total Price, Date
+		Given user login with valid "<username>" and "<password>"
+		And   user go on the Vehicle Costs page at the Fleet module
+		Then  user should be able to see following columns:
+			| TYPE        |
+			| TOTAL PRICE |
+			| DATE        |
+		Examples: valid credentials
+			| username        | password    |
+			| storemanager85  | UserUser123 |
+			| storemanager100 | UserUser123 |
+			| storemanager205 | UserUser123 |

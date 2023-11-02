@@ -23,15 +23,25 @@ Feature: US13 - As a user, I want to manage filters on the Vehicle Cost page
 
 
 	@B30G13-173
-	Scenario: User (store manager) should be able click on the first checkbox to check all the vehicle costs
-		Given user login with a store manager credentials
-		   And   user go on the Vehicle Costs page at the Fleet module
-		   Then  user should be able click on the first checkbox to check all the vehicle costs	
-
+	Scenario Outline: User (store manager) should be able click on the first checkbox to check all the vehicle costs
+		Given user login with valid "<username>" and "<password>"
+		And   user go on the Vehicle Costs page at the Fleet module
+		Then  user should be able click on the first checkbox to check all the vehicle costs
+		Examples: valid credentials
+			| username        | password    |
+			| storemanager51  | UserUser123 |
+			| storemanager69  | UserUser123 |
+			| storemanager211 | UserUser123 |
 
 
 	@B30G13-174
-	Scenario: User (sales manager) should be able click on the first checkbox to check all the vehicle costs
-		Given user login with a sales manager credentials
-		   And   user go on the Vehicle Costs page at the Fleet module
-		   Then  user should be able click on the first checkbox to check all the vehicle costs
+	Scenario Outline: User (sales manager) should be able click on the first checkbox to check all the vehicle costs
+		Given user login with valid "<username>" and "<password>"
+		And   user go on the Vehicle Costs page at the Fleet module
+		Then  user should be able click on the first checkbox to check all the vehicle costs
+		Examples: valid credentials
+			| username        | password    |
+			| salesmanager108 | UserUser123 |
+			| salesmanager133 | UserUser123 |
+			| salesmanager252 | UserUser123 |
+			| salesmanager277 | UserUser123 |
