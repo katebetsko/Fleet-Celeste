@@ -47,7 +47,7 @@ public class US4_StepDefs {
     }
     @When("user presses Vehicle contracts option under Fleet option -KB")
     public void user_presses_vehicle_contracts_option_under_fleet_option_kb() {
-        BrowserUtils.sleep(2);
+        //BrowserUtils.sleep(2);
         dashboardPage.vehicleContractsOption.click();
     }
     @Then("user should see Vehicle contacts page -KB")
