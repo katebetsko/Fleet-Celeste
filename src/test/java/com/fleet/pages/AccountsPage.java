@@ -2,32 +2,41 @@ package com.fleet.pages;
 
 import com.fleet.utilities.Driver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AccountsPage {
+import java.util.ArrayList;
+import java.util.List;
+
+public class AccountsPage extends BasePage {
 
     public AccountsPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(xpath = "//th[.='Account name']")
-    public static WebElement accountName;
+    public WebElement accountName;
 
     @FindBy(xpath = "//th[.='Contact name']")
-    public static WebElement contactName;
+    public WebElement contactName;
 
     @FindBy(xpath = "//th[.='Contact email']")
-    public static WebElement contactEmail;
+    public WebElement contactEmail;
 
     @FindBy(xpath = "//th[.='Contact phone']")
-    public static WebElement contactPhone;
+    public WebElement contactPhone;
 
     @FindBy(xpath = "//th[.='Created At']")
-    public static WebElement createdAt;
+    public WebElement createdAt;
 
     @FindBy(xpath = "//th[.='Updated At']")
-    public static WebElement updatedAt;
+    public WebElement updatedAt;
+
+    @FindAll(@FindBy(xpath = "//th//span[@class='grid-header-cell__label']"))
+    public List<WebElement> tableHeaders  = new ArrayList<>();
+
+
 
 
 

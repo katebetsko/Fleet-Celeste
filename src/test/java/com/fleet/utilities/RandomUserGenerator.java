@@ -8,7 +8,7 @@ public class RandomUserGenerator {
         String username = "";
         int minimum,maximum;
 
-        int random = new Random().nextInt(1,3);
+        int random = ThreadLocalRandom.current().nextInt(1,3);
 
         switch (userType){
             case "driver":
@@ -19,7 +19,8 @@ public class RandomUserGenerator {
                     minimum = 150;
                     maximum = 200;
                 }
-                username = "user"+new Random().nextInt(minimum,maximum+1);
+                username = "user"+ThreadLocalRandom.current().nextInt(minimum,maximum+1);
+                break;
 
             case "storemanager":
                 if(random==1){
@@ -29,7 +30,8 @@ public class RandomUserGenerator {
                     minimum = 201;
                     maximum = 250;
                 }
-                username = "storemanager"+new Random().nextInt(minimum,maximum+1);
+                username = "storemanager"+ThreadLocalRandom.current().nextInt(minimum,maximum+1);
+                break;
 
             case "salesmanager":
                 if(random==1){
@@ -39,8 +41,8 @@ public class RandomUserGenerator {
                     minimum = 201;
                     maximum = 250;
                 }
-                username = "salesmanager"+new Random().nextInt(minimum,maximum+1);
-
+                username = "salesmanager"+ThreadLocalRandom.current().nextInt(minimum,maximum+1);
+                break;
 
 
         }
