@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AccountsPage extends BasePage {
@@ -30,11 +31,23 @@ public class AccountsPage extends BasePage {
     @FindBy(xpath = "//th[.='Created At']")
     public WebElement createdAt;
 
+
+
+
     @FindBy(xpath = "//th[.='Updated At']")
     public WebElement updatedAt;
 
-    @FindAll(@FindBy(xpath = "//th//span[@class='grid-header-cell__label']"))
-    public List<WebElement> tableHeaders  = new ArrayList<>();
+    @FindBy(xpath = "//th[.='Owner']")
+    public WebElement owner;
+
+
+    @FindBy(css = ".grid-header-cell__label")
+    public List<WebElement> tableHeaders;
+
+
+
+
+
 
 
 
