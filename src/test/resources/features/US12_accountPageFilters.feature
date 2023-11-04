@@ -2,7 +2,6 @@
 Feature: As a user, I want to filter customers’ info on the Account page.
 
   Background: User should already be logged in
-    Given the user is on the login page
     And user logs in with a "storemanager" account
 
   Scenario: users should see 8 filter items on the Accounts page

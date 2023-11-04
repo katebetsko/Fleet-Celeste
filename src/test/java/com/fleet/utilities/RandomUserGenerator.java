@@ -7,9 +7,7 @@ public class RandomUserGenerator {
     public static String getUserName(String userType){
         String username = "";
         int minimum,maximum;
-
-
-          int random = ThreadLocalRandom.current().nextInt(1,3);
+        int random = ThreadLocalRandom.current().nextInt(1,3);
 
         switch (userType){
             case "driver":
