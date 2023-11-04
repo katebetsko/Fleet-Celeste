@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerInfoFilters {
+public class US12_CustomerInfoFilters {
     LoginPage loginPage = new LoginPage();
     AccountsPage_SH accountsPage = new AccountsPage_SH();
 

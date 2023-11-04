@@ -2,17 +2,14 @@ package com.fleet.pages;
 
 import com.fleet.utilities.Driver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class AccountsPage extends BasePage {
+public class AccountsPage_SH extends BasePage {
 
-    public AccountsPage(){
+    public AccountsPage_SH(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
