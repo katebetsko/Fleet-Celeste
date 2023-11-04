@@ -23,13 +23,16 @@ public class RandomUserGenerator {
 
 
             case "storemanager":
-                if(random==1){
+//                if(random==1){
                     minimum = 51;
                     maximum = 100;
-                }else{
-                    minimum = 201;
-                    maximum = 250;
-                }
+//                }
+                //The following range does not work on the transmuda website.
+                // If it is fixed you can uncomment them
+//                else{
+//                    minimum = 201;
+//                    maximum = 250;
+//                }
                 username = "storemanager"+ThreadLocalRandom.current().nextInt(minimum,maximum+1);
 
                 break;
