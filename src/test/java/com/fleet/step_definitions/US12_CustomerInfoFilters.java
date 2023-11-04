@@ -52,7 +52,8 @@ public class US12_CustomerInfoFilters {
         }
 
         if(nonExistenColumnNamesList.isEmpty()==false){
-            Assert.assertTrue("The following columns do not exist " +nonExistenColumnNamesList,false);
+            Assert.assertTrue("The following columns do not exist "
+                    +nonExistenColumnNamesList,false);
         }
 
 
