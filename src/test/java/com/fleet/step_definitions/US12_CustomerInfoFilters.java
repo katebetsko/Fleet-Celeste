@@ -1,33 +1,24 @@
 package com.fleet.step_definitions;
 
-import com.fleet.pages.AccountsPage;
+import com.fleet.pages.AccountsPage_SH;
 import com.fleet.pages.LoginPage;
 import com.fleet.utilities.BrowserUtils;
 import com.fleet.utilities.Driver;
-import com.fleet.utilities.RandomUserGenerator;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.junit.ComparisonFailure;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.w3c.dom.ls.LSException;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerInfoFilters {
     LoginPage loginPage = new LoginPage();
-    AccountsPage accountsPage = new AccountsPage();
+    AccountsPage_SH accountsPage = new AccountsPage_SH();
 
 
-    @Given("the user is in the accounts page")
-    public void the_user_is_in_the_accounts_page() {
-//        loginPage.userName.sendKeys(RandomUserGenerator.getUserName("storemanager"));
-//        loginPage.password.sendKeys(RandomUserGenerator.getPassword());
-//        loginPage.submit.click();
+    @Given("the user is in the accounts page SH")
+    public void the_user_is_in_the_accounts_page_SH() {
         BrowserUtils.sleep(2);
         Actions action = new Actions(Driver.getDriver());
         action.moveToElement(loginPage.customersButton).perform();
@@ -36,8 +27,8 @@ public class CustomerInfoFilters {
 
     }
 
-    @Then("user should see these eight filter items on the Accounts page")
-    public void user_should_see_filter_items_on_the_accounts_page(List<String> expectedColumns) {
+    @Then("user should see these eight filter items on the Accounts page SH")
+    public void user_should_see_filter_items_on_the_accounts_page_SH(List<String> expectedColumns) {
         BrowserUtils.sleep(2);
 
         List<String> nonExistenColumnNamesList = new ArrayList<>();

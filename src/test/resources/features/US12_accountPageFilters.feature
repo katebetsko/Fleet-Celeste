@@ -6,8 +6,8 @@ Feature: As a user, I want to filter customers’ info on the Account page.
     And user logs in with a "storemanager" account
 
   Scenario: users should see 8 filter items on the Accounts page
-    Given the user is in the accounts page
-    Then user should see these eight filter items on the Accounts page
+    Given the user is in the accounts page SH
+    Then user should see these eight filter items on the Accounts page SH
       | Account Name  |
       | Contact Name  |
       | Contact Email |
