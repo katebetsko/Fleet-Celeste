@@ -16,6 +16,7 @@ import org.junit.runner.RunWith;
         glue = "com/fleet/step_definitions",
         dryRun = false,
         tags = " @US12_sulaiman",
+
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
