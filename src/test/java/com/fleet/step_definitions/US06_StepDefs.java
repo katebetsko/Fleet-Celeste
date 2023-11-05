@@ -7,6 +7,7 @@ import com.fleet.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.Credentials;
 import org.openqa.selenium.interactions.Actions;
 
@@ -48,9 +49,11 @@ public class US06_StepDefs {
 
         BrowserUtils.waitFor(2);
 
-        vehiclePage.deleteIcon.isDisplayed();
-        vehiclePage.editIcon.isDisplayed();
-        vehiclePage.viewIcon.isDisplayed();
+        Assert.assertTrue( vehiclePage.deleteIcon.isDisplayed());
+        Assert.assertTrue( vehiclePage.editIcon.isDisplayed());
+        Assert.assertTrue( vehiclePage.viewIcon.isDisplayed());
+
+
 
 
     }
