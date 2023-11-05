@@ -26,13 +26,17 @@ public class RandomUserGenerator {
 //                if(random==1){
                     minimum = 51;
                     maximum = 100;
+
+//                    The following range does not work on the transmuda website.
+//                    If it is fixed you can uncomment them
+
 //                }
-                //The following range does not work on the transmuda website.
-                // If it is fixed you can uncomment them
+//
 //                else{
 //                    minimum = 201;
 //                    maximum = 250;
 //                }
+
                 username = "storemanager"+ThreadLocalRandom.current().nextInt(minimum,maximum+1);
 
                 break;
@@ -42,9 +46,11 @@ public class RandomUserGenerator {
                 if(random==1){
                     minimum = 101;
                     maximum = 150;
-                }else{
-                    minimum = 201;
-                    maximum = 250;
+                }
+
+                else{
+                    minimum = 251;
+                    maximum = 300;
                 }
                 username = "salesmanager"+ThreadLocalRandom.current().nextInt(minimum,maximum+1);
                 break;

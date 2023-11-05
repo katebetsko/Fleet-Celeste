@@ -31,7 +31,7 @@ public class LoginPage {
 
 
 
-    @FindBy(xpath = "(//span)[21]")
+    @FindBy(xpath = "((//span[contains(text(), \"Accounts\")])[1])")
     public WebElement accountsButton;
 
     @FindBy(xpath = "(//span[@class=\"title title-level-1\"])[3]")

@@ -41,6 +41,15 @@ public class AccountsPage_SH extends BasePage {
     @FindBy(css = ".grid-header-cell__label")
     public List<WebElement> tableHeaders;
 
+    @FindBy(css = "div[class=\"filter-item oro-drop\"]")
+    public List<WebElement> filterDropdowns;
+
+    @FindBy(css = "a[title=\"Filters\"]")
+
+    public WebElement filtersButton;
+
+
+
 
 
 
