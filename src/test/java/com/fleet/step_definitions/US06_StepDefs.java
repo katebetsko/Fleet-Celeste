@@ -26,10 +26,11 @@ public class US06_StepDefs {
         Driver.getDriver().get("https://qa.transmuda.com/user/login");
 
     }
-    @Then("User Enters {string} and {string} Credentials for Store Manager")
-    public void userEntersAndCredentialsForStoreManager(String username, String password) {
+    @Then("User Enters {string} and {string} Credentials")
+    public void userEntersAndCredentials(String username, String password) {
         login.login(username, password);
     }
+
     @When("User hovers over the Fleet menu")
     public void user_hovers_over_the_fleet_menu() {
         BrowserUtils.waitFor(2);
@@ -57,8 +58,6 @@ public class US06_StepDefs {
 
 
     }
-
-
 
 
 
