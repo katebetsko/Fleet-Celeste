@@ -34,7 +34,7 @@ Feature: US13 - As a user, I want to manage filters on the Vehicle Cost page
 			| username        | password    |
 			| salesmanager101 | UserUser123 |
 			| salesmanager145 | UserUser123 |
-			| salesmanager258 | UserUser123 |
+			| salesmanager257 | UserUser123 |
 
 
 	@B30G13-171
