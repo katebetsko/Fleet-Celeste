@@ -14,6 +14,7 @@ Feature: Vehicle Page
      | username        | password    |
      | storemanager51  | UserUser123 |
      | storemanager100 | UserUser123 |
+     | storemanager101 | UserUser123 |
 
   Scenario Outline: Users should see “view, edit, delete” when they hover the mouse over the 3 dots “…”
     Given User is already on the Login Page
