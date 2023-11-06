@@ -19,19 +19,6 @@ public class US4_StepDefs {
     LoginPage loginPage = new LoginPage();
     DashboardPageKB dashboardPage = new DashboardPageKB();
 
-    @Given("the user is on the Transmuda login page -KB")
-    public void the_user_is_on_the_transmuda_login_page_kb() {
-        Driver.getDriver().get("https://qa.transmuda.com/user/login");
-    }
-    @When("user enters valid {string} and {string} -KB")
-    public void user_enters_valid_username_and_password_kb(String username, String password) {
-        loginPage.userName.sendKeys(username);
-        loginPage.password.sendKeys(password);
-    }
-    @When("user presses LOG IN button -KB")
-    public void user_presses_log_in_button_kb() {
-        loginPage.submit.click();
-    }
     @When("user sees Dashboard page -KB")
     public void user_sees_dashboard_page_kb() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
@@ -47,10 +34,11 @@ public class US4_StepDefs {
     }
     @When("user presses Vehicle contracts option under Fleet option -KB")
     public void user_presses_vehicle_contracts_option_under_fleet_option_kb() {
+        //BrowserUtils.sleep(2);
         dashboardPage.vehicleContractsOption.click();
     }
-    @Then("user should see Vehicle contacts page -KB")
-    public void user_should_see_vehicle_contacts_page_kb() {
+    @Then("user should see Vehicle contracts page -KB")
+    public void user_should_see_vehicle_contracts_page_kb() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.titleIs("All - Vehicle Contract - Entities - System - Car - Entities - System"));
 
